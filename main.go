@@ -18,12 +18,12 @@ func main() {
 	jsonData := encoding.JSONData{FileInput: "jsonInput.json", FileOutput: "yamlOutput.yml"}
 	err := Encode(&jsonData)
 	if err != nil {
-		fmt.Printf("ошибка при перекодировании данных из JSON в YAML: %s", err.Error())
+		fmt.Printf("ошибка при перекодировании данных из JSON в YAML: %s\n", err.Error())
 	}
 
 	yamlData := encoding.YAMLData{FileInput: "yamlInput.yml", FileOutput: "jsonOutput.json"}
 	err = Encode(&yamlData)
 	if err != nil {
-		fmt.Printf("ошибка при перекодировании данных из YAML в JSON: %s", err.Error())
+		fmt.Printf("ошибка при перекодировании данных из YAML в JSON: %s\n", err.Error())
 	}
 }
